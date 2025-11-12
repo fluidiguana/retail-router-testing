@@ -27,8 +27,8 @@ The router uses a two-stage approach:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/retail-router.git
-cd retail-router
+git clone https://github.com/fluidiguana/retail-router-testing.git
+cd retail-router-testing
 ```
 
 2. Create a virtual environment:
