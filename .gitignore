@@ -39,6 +39,8 @@ ENV/
 
 # Results and data
 results.csv
+performance_degradation_results.csv
+performance_degradation.png
 *.csv
 
 # OS

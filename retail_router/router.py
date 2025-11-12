@@ -18,15 +18,16 @@ class ToolSpec:
     embedding: np.ndarray
 
 class RetailRouter:
-    def __init__(self, model: str = "gpt-4o-mini", embed_model: str = "text-embedding-3-small", top_k: int = 4):
+    def __init__(self, model: str = "gpt-4o-mini", embed_model: str = "text-embedding-3-small", top_k: int = 4, tools: List[Any] = None):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
         self.embed_model = embed_model
         self.top_k = top_k
+        self._tools = tools if tools is not None else TOOLS
         self._tool_specs: List[ToolSpec] = []
-        texts = [f"{t.name}: {t.description}" for t in TOOLS]
+        texts = [f"{t.name}: {t.description}" for t in self._tools]
         embs = self.client.embeddings.create(model=self.embed_model, input=texts).data
-        for t, e in zip(TOOLS, embs):
+        for t, e in zip(self._tools, embs):
             self._tool_specs.append(ToolSpec(
                 name=t.name, description=t.description, schema=t.schema,
                 embedding=np.array(e.embedding, dtype=np.float32)
@@ -79,7 +80,7 @@ class RetailRouter:
         tool_name = tool_call.function.name
         tool_args = json.loads(tool_call.function.arguments)
 
-        tool_map = {t.name: t for t in TOOLS}
+        tool_map = {t.name: t for t in self._tools}
         if tool_name not in tool_map:
             return {"ok": False, "error": f"Unknown tool '{tool_name}' chosen."}
 
