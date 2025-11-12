@@ -15,66 +15,7 @@ The router uses a two-stage approach:
 1. **Tool Retrieval**: Uses embeddings to find the top 4 most relevant tools (by default)
 2. **Tool Selection**: LLM selects the best tool and executes it
 3. **Answer Synthesis**: LLM synthesizes a final answer from the tool result
-
-## Setup
-
-### Prerequisites
-
-- Python 3.8+
-- OpenAI API key
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/retail-router.git
-cd retail-router
-```
-
-2. Create a virtual environment:
-```bash
-python -m venv venv
-```
-
-3. Activate the virtual environment:
-
-**Windows (PowerShell):**
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-**Windows (Command Prompt):**
-```cmd
-venv\Scripts\activate.bat
-```
-
-**macOS/Linux:**
-```bash
-source venv/bin/activate
-```
-
-4. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-5. Set your OpenAI API key:
-
-**Windows (PowerShell):**
-```powershell
-$env:OPENAI_API_KEY = "your-api-key-here"
-```
-
-**Windows (Command Prompt):**
-```cmd
-set OPENAI_API_KEY=your-api-key-here
-```
-
-**macOS/Linux:**
-```bash
-export OPENAI_API_KEY=your-api-key-here
-```
-
+   
 ## Usage
 
 ### Running the Evaluation
