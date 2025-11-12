@@ -1,0 +1,50 @@
+{"qid": "g1", "query": "Do we have the 12-pack sparkling water, SKU SW-882, in SF store 112?", "expected_tool": "InventoryLookup", "expected_args": {"sku": "SW-882", "store": "0112"}, "must_contain": ["Inventory", "12", "on-hand"]}
+{"qid": "g2", "query": "What\u2019s the lowest price on the Owala 24oz bottle locally and online?", "expected_tool": "PriceCompare", "expected_args": {"query": "Owala 24oz bottle"}, "must_contain": ["Lowest price"]}
+{"qid": "g3", "query": "Is member 339120 eligible for the weekend 20% promo?", "expected_tool": "PromoEligibility", "expected_args": {"member_id": "339120"}, "must_contain": ["eligible", "20%"]}
+{"qid": "g4", "query": "For SKU BAT-9V, how much should we reorder for next week?", "expected_tool": "ReplenishmentPlanner", "expected_args": {"sku": "BAT-9V"}, "must_contain": ["reorder", "Forecast"]}
+{"qid": "g5", "query": "Find me the two nearest stores to 94114.", "expected_tool": "StoreLocator", "expected_args": {"near": "94114"}, "must_contain": ["Closest stores"]}
+{"qid": "g6", "query": "What\u2019s the return policy for opened protein powder?", "expected_tool": "ReturnPolicy", "expected_args": {"item": "opened protein powder"}, "must_contain": ["Return policy"]}
+{"qid": "g7", "query": "Check member 778201 status\u2014tier, renewal, and rewards.", "expected_tool": "MembershipStatus", "expected_args": {"member_id": "778201"}, "must_contain": ["Member", "renewal"]}
+{"qid": "g8", "query": "Track order 123-999\u2014has it shipped and when will it arrive?", "expected_tool": "OrderStatus", "expected_args": {"order_id": "123-999"}, "must_contain": ["Order", "ETA"]}
+{"qid": "g9", "query": "Will the magnetic case MC-11 fit the Galaxy S24 Ultra?", "expected_tool": "ProductCompatibility", "expected_args": {"base_item": "Galaxy S24 Ultra", "add_on": "magnetic case MC-11"}, "must_contain": ["Compatibility"]}
+{"qid": "g10", "query": "For beverages, how should we adjust facings to boost sales?", "expected_tool": "ShelfSpaceOptimizer", "expected_args": {"category": "beverages"}, "must_contain": ["Planogram", "facings"]}
+{"qid": "g11", "query": "Customer asks: can I return an opened bag of chips?", "expected_tool": "ReturnPolicy", "expected_args": {"item": "opened bag of chips"}, "must_contain": ["opened", "not returnable"]}
+{"qid": "g12", "query": "What rewards does member 552201 have and when does renewal hit?", "expected_tool": "MembershipStatus", "expected_args": {"member_id": "552201"}, "must_contain": ["rewards", "renewal"]}
+{"qid": "g13", "query": "Is the 65W USB-C charger compatible with the Ultrabook X1?", "expected_tool": "ProductCompatibility", "expected_args": {"base_item": "Ultrabook X1", "add_on": "65W USB-C charger"}, "must_contain": ["Compatibility"]}
+{"qid": "g14", "query": "We\u2019re short on AA batteries\u2014how many should we buy? SKU AA-24", "expected_tool": "ReplenishmentPlanner", "expected_args": {"sku": "AA-24"}, "must_contain": ["reorder"]}
+{"qid": "g15", "query": "Compare prices for the 55\u201d TCL 5-series near me and online.", "expected_tool": "PriceCompare", "expected_args": {"query": "55\u201d TCL 5-series"}, "must_contain": ["Lowest price"]}
+{"qid": "g16", "query": "Search for wireless headphones under $50.", "expected_tool": "ProductSearch", "expected_args": {"query": "wireless headphones under $50"}, "must_contain": ["Found", "products matching"]}
+{"qid": "g17", "query": "Set up an alert when SKU LAP-2024 drops below 3 units.", "expected_tool": "StockAlert", "expected_args": {"sku": "LAP-2024", "threshold": "3"}, "must_contain": ["Stock alert", "notify"]}
+{"qid": "g18", "query": "What's the contact info for vendor TechSupply Co?", "expected_tool": "VendorContact", "expected_args": {"vendor": "TechSupply Co"}, "must_contain": ["Contact", "Lead time"]}
+{"qid": "g19", "query": "How much does it cost to ship 5 pounds to zip code 90210?", "expected_tool": "ShippingCalculator", "expected_args": {"zip_code": "90210", "weight": "5"}, "must_contain": ["Shipping", "Standard"]}
+{"qid": "g20", "query": "What's the warranty on SKU CAM-500?", "expected_tool": "WarrantyChecker", "expected_args": {"sku": "CAM-500"}, "must_contain": ["Warranty", "Extended warranty"]}
+{"qid": "g21", "query": "Check the balance on gift card 1234-5678-9012.", "expected_tool": "GiftCardBalance", "expected_args": {"card_number": "1234-5678-9012"}, "must_contain": ["Gift card", "Balance"]}
+{"qid": "g22", "query": "How many loyalty points does member 445522 have?", "expected_tool": "LoyaltyPoints", "expected_args": {"member_id": "445522"}, "must_contain": ["points", "reward"]}
+{"qid": "g23", "query": "Show me the price history for SKU TV-65.", "expected_tool": "PriceHistory", "expected_args": {"sku": "TV-65"}, "must_contain": ["Price history", "Current"]}
+{"qid": "g24", "query": "What are the reviews for product SKU PHONE-X?", "expected_tool": "ProductReviews", "expected_args": {"sku": "PHONE-X"}, "must_contain": ["Reviews", "stars"]}
+{"qid": "g25", "query": "What bundles are available for SKU TABLET-10?", "expected_tool": "BundleRecommendation", "expected_args": {"base_sku": "TABLET-10"}, "must_contain": ["Bundle", "save"]}
+{"qid": "g26", "query": "What do customers also buy with SKU SPEAKER-20?", "expected_tool": "CrossSellSuggestions", "expected_args": {"sku": "SPEAKER-20"}, "must_contain": ["also purchased"]}
+{"qid": "g27", "query": "Transfer 10 units of SKU WIDGET-5 from store 100 to store 200.", "expected_tool": "InventoryTransfer", "expected_args": {"from_store": "100", "to_store": "200", "sku": "WIDGET-5", "qty": "10"}, "must_contain": ["Transfer", "ETA"]}
+{"qid": "g28", "query": "Report damaged item SKU LAMP-30 at store 150.", "expected_tool": "DamagedItemReport", "expected_args": {"sku": "LAMP-30", "store": "150"}, "must_contain": ["Damage report", "Credit"]}
+{"qid": "g29", "query": "When will SKU BATTERY-AA be restocked?", "expected_tool": "RestockNotification", "expected_args": {"sku": "BATTERY-AA"}, "must_contain": ["Restock", "Expected delivery"]}
+{"qid": "g30", "query": "What are the hours for store 205?", "expected_tool": "StoreHours", "expected_args": {"store": "205"}, "must_contain": ["hours", "Mon"]}
+{"qid": "g31", "query": "What payment method was used for order 456-789?", "expected_tool": "PaymentMethod", "expected_args": {"order_id": "456-789"}, "must_contain": ["Payment", "charged"]}
+{"qid": "g32", "query": "Process a refund of $75.50 for order 789-123.", "expected_tool": "RefundProcessor", "expected_args": {"order_id": "789-123", "amount": "75.50"}, "must_contain": ["Refund processed", "refunded"]}
+{"qid": "g33", "query": "What's the exchange policy for electronics?", "expected_tool": "ExchangePolicy", "expected_args": {"item": "electronics"}, "must_contain": ["Exchange policy", "days"]}
+{"qid": "g34", "query": "Get the specifications for SKU LAPTOP-15.", "expected_tool": "ProductSpecs", "expected_args": {"sku": "LAPTOP-15"}, "must_contain": ["Specs", "Dimensions"]}
+{"qid": "g35", "query": "I need a quote for 100 units of SKU CABLE-USB.", "expected_tool": "BulkOrderQuote", "expected_args": {"sku": "CABLE-USB", "qty": "100"}, "must_contain": ["Bulk quote", "discount"]}
+{"qid": "g36", "query": "Check inventory for SKU MOUSE-WL at store 300.", "expected_tool": "InventoryLookup", "expected_args": {"sku": "MOUSE-WL", "store": "300"}, "must_contain": ["Inventory", "on-hand"]}
+{"qid": "g37", "query": "Find the best price for a 32-inch monitor.", "expected_tool": "PriceCompare", "expected_args": {"query": "32-inch monitor"}, "must_contain": ["Lowest price"]}
+{"qid": "g38", "query": "Is member 998877 eligible for the summer sale promo?", "expected_tool": "PromoEligibility", "expected_args": {"member_id": "998877"}, "must_contain": ["eligible", "promo"]}
+{"qid": "g39", "query": "How much should we reorder for SKU KEYBOARD-MECH?", "expected_tool": "ReplenishmentPlanner", "expected_args": {"sku": "KEYBOARD-MECH"}, "must_contain": ["reorder", "Forecast"]}
+{"qid": "g40", "query": "Where are the closest stores to downtown Seattle?", "expected_tool": "StoreLocator", "expected_args": {"near": "downtown Seattle"}, "must_contain": ["Closest stores"]}
+{"qid": "g41", "query": "Can I return a used coffee maker?", "expected_tool": "ReturnPolicy", "expected_args": {"item": "used coffee maker"}, "must_contain": ["Return policy"]}
+{"qid": "g42", "query": "Show me member 112233's membership details.", "expected_tool": "MembershipStatus", "expected_args": {"member_id": "112233"}, "must_contain": ["Member", "tier"]}
+{"qid": "g43", "query": "What's the status of order 555-888?", "expected_tool": "OrderStatus", "expected_args": {"order_id": "555-888"}, "must_contain": ["Order", "shipped"]}
+{"qid": "g44", "query": "Does the wireless charger work with iPhone 15?", "expected_tool": "ProductCompatibility", "expected_args": {"base_item": "iPhone 15", "add_on": "wireless charger"}, "must_contain": ["Compatibility"]}
+{"qid": "g45", "query": "How should we optimize shelf space for snacks?", "expected_tool": "ShelfSpaceOptimizer", "expected_args": {"category": "snacks"}, "must_contain": ["Planogram", "facings"]}
+{"qid": "g46", "query": "Search for running shoes size 10.", "expected_tool": "ProductSearch", "expected_args": {"query": "running shoes size 10"}, "must_contain": ["Found", "products"]}
+{"qid": "g47", "query": "Alert me when SKU HEADPHONES-BT goes below 5 in stock.", "expected_tool": "StockAlert", "expected_args": {"sku": "HEADPHONES-BT", "threshold": "5"}, "must_contain": ["Stock alert"]}
+{"qid": "g48", "query": "Get shipping costs to 10001 for a 2 pound package.", "expected_tool": "ShippingCalculator", "expected_args": {"zip_code": "10001", "weight": "2"}, "must_contain": ["Shipping", "Standard"]}
+{"qid": "g49", "query": "Check warranty details for SKU TABLET-PRO.", "expected_tool": "WarrantyChecker", "expected_args": {"sku": "TABLET-PRO"}, "must_contain": ["Warranty"]}
+{"qid": "g50", "query": "What's the price trend for SKU CAMERA-4K over the last month?", "expected_tool": "PriceHistory", "expected_args": {"sku": "CAMERA-4K"}, "must_contain": ["Price history", "Current"]}
