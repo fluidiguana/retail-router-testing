@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .env
 __pycache__/
 *.pyc
@@ -21,4 +22,63 @@ coverage.xml
 .mypy_cache
 .pytest_cache
 .hypothesis
+=======
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Results and data
+results.csv
+performance_degradation_results.csv
+performance_degradation.png
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+>>>>>>> origin/main
 
