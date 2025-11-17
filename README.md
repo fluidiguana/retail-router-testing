@@ -2,7 +2,7 @@
 
 A simple Reasoning + Acting (ReACT) agent implementation in Python that can evolve into an MCP-compatible agent.
 
-## Features
+## Feature List
 
 - ReACT loop implementation (Reason, Act, Observe)
 - Extensible architecture for MCP compatibility
